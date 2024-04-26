@@ -6,5 +6,5 @@ task Test {
     Invoke-ScriptAnalyzer -Path .\cp-21yamExcelCoordinate.psm1
 }
 task Release {
-    Publish-PSResource -Path .\cp-21yamExcelCoordinate.psd1 -Repository PSGallery -ApiKey 'oy2ijintx2menomqvzzqub2jut3dex2endgt2pvgrrfopq'
+    Publish-PSResource -Path .\cp-21yamExcelCoordinate.psd1 -Repository PSGallery -ApiKey $env:PSGALLERY_API_KEY
 }
