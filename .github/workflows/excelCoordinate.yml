@@ -14,6 +14,6 @@ jobs:
       - name: build
         # env: 
         #   PSGALLERY_API_KEY: ${{ secrets.PSGALLERY_API_KEY }}
-        # shell: pwsh
+        shell: pwsh
         run: |
           ./cp-21yamExcelCoordinate.build.ps1
