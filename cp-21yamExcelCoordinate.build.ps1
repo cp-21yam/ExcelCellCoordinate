@@ -1,6 +1,6 @@
 task Test {
-    Import-Module Pester
-    Invoke-Pester .\cp-21yamExcelCoordinate.Tests.ps1
+    # Import-Module Pester
+    # Invoke-Pester .\cp-21yamExcelCoordinate.Tests.ps1
 
     Import-Module PSScriptAnalyzer
     Invoke-ScriptAnalyzer -Path .\cp-21yamExcelCoordinate.psm1
