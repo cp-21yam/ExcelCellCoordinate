@@ -11,8 +11,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: build Module
-        # env: 
-        #   PSGALLERY_API_KEY: ${{ secrets.PSGALLERY_API_KEY }}
+      - name: Install Module
         shell: pwsh
-        run: ./cp-21yamExcelCoordinate.build.ps1        
+        run: | 
+        Set-PSRepository PSGallery -InstallationPolicy Trusted
+        Install-Module PSScriptAnalyzer, Pester, InvokeBuild -Scope CurrentUser
+      - name: Invoke Build
+        shell: pwsh
+        run: Invoke-Build .
