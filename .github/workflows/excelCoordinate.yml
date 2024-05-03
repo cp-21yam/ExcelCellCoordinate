@@ -14,8 +14,8 @@ jobs:
       - name: Install Module
         shell: pwsh
         run: | 
-        Set-PSRepository PSGallery -InstallationPolicy Trusted
-        Install-Module PSScriptAnalyzer, Pester, InvokeBuild -Scope CurrentUser
+          Set-PSRepository PSGallery -InstallationPolicy Trusted
+          Install-Module PSScriptAnalyzer, Pester, InvokeBuild -Scope CurrentUser
       - name: Invoke Build
         shell: pwsh
         run: Invoke-Build .
