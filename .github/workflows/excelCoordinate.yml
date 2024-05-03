@@ -11,5 +11,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Run a one-line script
-        run: echo Hello from Octo Organization
+      - name: build
+        env: 
+          PSGALLERY_API_KEY: ${{ secrets.PSGALLERY_API_KEY }}
+        shell: pwsh
+        run: |
+          ./cp-21yamExcelCoordinate.build.ps1
